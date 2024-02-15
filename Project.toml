@@ -1,0 +1,8 @@
+name = "SiriusModels"
+uuid = "c58b461e-cf49-4874-a3f8-d439c7e24a16"
+authors = ["Vitor <vitor.souza@lnls.br>"]
+version = "0.1.0"
+
+[deps]
+PrecompileTools = "aea7be01-6a6a-4083-8856-8a6e6704d82a"
+Track = "62b9129b-677e-4bae-ad6d-cef5d3fb1fc8"
