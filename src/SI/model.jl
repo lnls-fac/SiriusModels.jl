@@ -822,7 +822,7 @@ end
 function set_rf_frequency!(accelerator::Accelerator)
     circumference::Float64 = accelerator.length
     velocity::Float64 = accelerator.velocity
-    # velocity = light_speed # have to change other things
+    #velocity::Float64 = light_speed # have to change other things
     rev_freq::Float64 = velocity / circumference
     freq::Float64 = accelerator.harmonic_number * rev_freq
     phase_lag::Float64 = 0.0 #500e6
