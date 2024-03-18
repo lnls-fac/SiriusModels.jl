@@ -616,6 +616,7 @@ function _create_lattice(optics_mode::String, simplified, ids)
         
     # -- flatten the lattice vector
     anel = lattice_flatten!(anel)
+    anel = individual(anel)
 
     # -- create the Accelerator
     the_ring = Accelerator(energy)
@@ -956,4 +957,12 @@ function set_vacuum_chamber_bc(acc::Accelerator)
         loop_vchamber(mci, false)
         loop_vchamber(mci, true)
     end
+end
+
+function individual(lattice_in::Vector{Element})
+    lattice_out = Element[]
+    for elem in lattice_in
+        push!(lattice_out, copy(elem))
+    end
+    return lattice_out
 end
